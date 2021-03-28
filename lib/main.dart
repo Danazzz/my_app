@@ -17,15 +17,17 @@ class MyApp extends StatelessWidget {
             Text('Pertanyaan!'),
             RaisedButton(
               child: Text('Jawaban 1'),
-              onPressed: jawab,
+              onPressed: () => print('jawaban dipilih!'),
             ),
             RaisedButton(
               child: Text('Jawaban 2'),
-              onPressed: jawab,
+              onPressed: () {
+                print('jawaban dipilih!');
+              },
             ),
             RaisedButton(
               child: Text('Jawaban 3'),
-              onPressed: jawab,
+              onPressed: () => print('jawaban dipilih!'),
             )
           ])),
     );
