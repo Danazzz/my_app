@@ -15,17 +15,17 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(children: <Widget>[
             Text('Pertanyaan!'),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Jawaban 1'),
               onPressed: () => print('jawaban dipilih!'),
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Jawaban 2'),
               onPressed: () {
                 print('jawaban dipilih!');
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Jawaban 3'),
               onPressed: () => print('jawaban dipilih!'),
             )
