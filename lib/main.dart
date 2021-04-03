@@ -1,35 +1,54 @@
 import 'package:flutter/material.dart';
 
+// void main() {
+//   runApp(MyApp());
+// }
+
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  jawab() {
-    print('jawaban dipilih!');
+class _MyAppState extends State<MyApp> {
+  var questionIndex = 0;
+
+  void answerQuestion() {
+    questionIndex = questionIndex + 1;
+    print(questionIndex);
   }
 
+  @override
   Widget build(BuildContext context) {
+    var questions = [
+      'Apa warna favorit anda?',
+      'apa peliharaan favorit anda?',
+    ];
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: Text('My first App'),
-          ),
-          body: Column(children: <Widget>[
-            Text('Pertanyaan!'),
-            ElevatedButton(
-              child: Text('Jawaban 1'),
-              onPressed: () => print('jawaban dipilih!'),
+        appBar: AppBar(
+          title: Text('Aplikasi Quiz'),
+        ),
+        body: Column(
+          children: [
+            Text(
+              questions[questionIndex],
             ),
             ElevatedButton(
-              child: Text('Jawaban 2'),
+              child: Text('jawab 1'),
+              onPressed: answerQuestion,
+            ),
+            ElevatedButton(
+              child: Text('jawab 2'),
+              onPressed: () => print(
+                  'jawab 2 dipilih!'), // ini akan muncul pada debug console di visual code
+            ),
+            ElevatedButton(
+              child: Text('jawab 3'),
               onPressed: () {
-                print('jawaban dipilih!');
+                // ...
+                print('jawab 3 dipilih');
               },
             ),
-            ElevatedButton(
-              child: Text('Jawaban 3'),
-              onPressed: () => print('jawaban dipilih!'),
-            )
-          ])),
+          ],
+        ),
+      ),
     );
   }
 }
