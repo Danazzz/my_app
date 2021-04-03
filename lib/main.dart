@@ -19,16 +19,16 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final _questions = const [
     {
+      'questionText': 'Apa makanan favorit anda?',
+      'answers': ['Pizza', 'Burger', 'Spagetti', 'Steak'],
+    },
+    {
+      'questionText': 'Apa karakter Genshin Impact favorit anda?',
+      'answers': ['Ganyu', 'Hu tao', 'Zhong li', 'Mona'],
+    },
+    {
       'questionText': 'Apa warna favorit anda?',
-      'answers': ['Hitam', 'Merah', 'Hijau', 'Putih'],
-    },
-    {
-      'questionText': 'Apa peliharaan favorit anda?',
-      'answers': ['Anjing', 'kucing', 'Burung', 'Ular'],
-    },
-    {
-      'questionText': 'Berapa jumlah peliharaan anda?',
-      'answers': ['1 ekor', '2 ekor', '3 ekor', '4 ekor'],
+      'answers': ['Pink', 'Kuning', 'Biru', 'Hijau'],
     },
   ];
   var _questionIndex = 0;
