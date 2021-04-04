@@ -59,8 +59,21 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          brightness: Brightness.light,
+          backgroundColor: Colors.amberAccent,
           leading: Icon(Icons.home),
-          title: Text('Aplikasi quiz'),
+          title: Text('Aplikasi Quiz Ceria',
+              style: TextStyle(color: Colors.brown)),
+          actions: <Widget>[
+            IconButton(
+              icon: new Icon(Icons.call, color: Colors.white),
+              onPressed: null,
+            ),
+            IconButton(
+              icon: new Icon(Icons.search, color: Colors.white),
+              onPressed: null,
+            ),
+          ],
         ),
         body: _questionIndex < _questions.length
             ? Quiz(
